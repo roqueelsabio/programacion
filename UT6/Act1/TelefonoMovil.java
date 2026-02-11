@@ -82,10 +82,19 @@ public class TelefonoMovil {
      */
     public boolean compNum(String numTel) {
         for (Contacto cont : this.myContacts) {
-            if (cont == null) {
-                return false;
-            }
             if (cont.getPhoneNumber().equals(numTel)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /*
+    Igual que antes, pero esta vez devuelve true si ya existe un nombre igual
+     */
+    public boolean compNom(String nombre) {
+        for (Contacto cont : this.myContacts) {
+            if (cont.getName().equals(nombre)) {
                 return true;
             }
         }

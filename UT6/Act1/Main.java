@@ -50,13 +50,13 @@ public class Main {
                         Implemento el método creado para ver si existe o no el teléfono. Si no existe, lo crea y muestra el nombre y
                         teléfono y si no, muestra un mensaje de error
                          */
-                        if (!miTelefono.compNum(numTel)) {
-                            System.out.println("Contacto " + nombre + " añadido con número de teléfono " + numTel + ".");
+                        if (!miTelefono.compNum(numTel) && !miTelefono.compNom(nombre)) {
+                            System.out.println("Contacto " + nombre + " añadid2o con número de teléfono " + numTel + ".");
                             miTelefono.addNewContact(contacto);
                             System.out.println();
                         }
                          else {
-                            System.out.println("Error. Ese número de teléfono ya está asignado.");
+                            System.out.println("Error. El nombre o el número de teléfono ya está asignado.");
                             System.out.println();
                         }
                         break;
