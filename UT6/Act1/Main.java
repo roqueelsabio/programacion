@@ -47,8 +47,8 @@ public class Main {
                         contacto = Contacto.createContact(nombre, numTel);
 
                         /*
-                        Implemento el método creado para ver si existe o no el teléfono. Si no existe, lo crea y muestra el nombre y
-                        teléfono y si no, muestra un mensaje de error
+                        Implemento los 2 métodos que he creado, que comprueban y devuelven true o false dependiendo
+                        si ya existen los nombres y los números de teléfono
                          */
                         if (!miTelefono.compNum(numTel) && !miTelefono.compNom(nombre)) {
                             System.out.println("Contacto " + nombre + " añadid2o con número de teléfono " + numTel + ".");
