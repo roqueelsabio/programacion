@@ -66,11 +66,16 @@ public class Main {
                         System.out.println("Introduce el nombre del contacto a actualizar:");
                         nombre = scan.nextLine();
                         Contacto contAnt = miTelefono.queryContact(nombre);
-                        System.out.println("Introduce el nuevo número de teléfono a actualizar:");
-                        numTel = scan.nextLine();
-                        contacto1 = Contacto.createContact(nombre, numTel);
-                        miTelefono.updateContact(contAnt, contacto1);
-                        System.out.println();
+                        if (contAnt == null) {
+                            System.out.println("No existe ese contacto en la lista.");
+                            System.out.println();
+                        } else {
+                            System.out.println("Introduce el nuevo número de teléfono a actualizar:");
+                            numTel = scan.nextLine();
+                            contacto1 = Contacto.createContact(nombre, numTel);
+                            miTelefono.updateContact(contAnt, contacto1);
+                            System.out.println();
+                        }
                         break;
 
                     case 4:
