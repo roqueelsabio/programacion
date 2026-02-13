@@ -55,23 +55,28 @@ public class TelefonoMovil {
     }
 
     private int findContact(String nombre) {
-        int index = myContacts.indexOf(nombre);
-        for (Contacto cont : this.myContacts) {
-            if (cont.getName()==nombre) {
+        int index = 0;
+        for (;index<this.myContacts.size();) {
+            if (this.myContacts.get(index).getName().equals(nombre)) {
                 return index;
             }
+            index++;
         }
         return -1;
     }
 
     public Contacto queryContact(String nombre) {
-        for (Contacto cont : this.myContacts) {
-            if (cont == null) {
-                return null;
+        if (this.findContact(nombre)>=0) {
+            for (Contacto cont : this.myContacts) {
+                if (cont == null) {
+                    return null;
+                }
+                if (cont.getName().equals(nombre)) {
+                    return cont;
+                }
             }
-         if (cont.getName().equals(nombre)) {
-             return cont;
-         }
+        } else {
+            return null;
         }
         return null;
     }
