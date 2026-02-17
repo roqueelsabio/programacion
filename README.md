@@ -15,3 +15,6 @@ Ejercicios de programación
 
 # UT6_Act1
 - Act1 (Programa que simula un teléfono móvil con contactos)
+
+# UT6_Act2
+- Act2 (Playlist de canciones, el usuario puede moverse y reproducir canciones y eliminarlas de la playlist)
