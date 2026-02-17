@@ -14,7 +14,7 @@ public class Main {
         //Canción 2 del álbum 1
         album1.addSong("Heaven", 3.00);
         //Canción 3 del álbum 1
-        album1.addSong("Hearbeat, Heartbreak", 2.15);
+        album1.addSong("Heartbeat, Heartbreak", 2.15);
         //Canción 4 del álbum 1
         album1.addSong("Your Affection", 2.52);
 
