@@ -18,3 +18,6 @@ Ejercicios de programación
 
 # UT6_Act2
 - Act2 (Playlist de canciones, el usuario puede moverse y reproducir canciones y eliminarlas de la playlist)
+
+# UT6_Act5
+- Programa que muestra los ejemplos del Set con planetas
