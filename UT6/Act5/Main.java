@@ -149,10 +149,6 @@ public class Main {
             System.out.println(planetasSet.toString());
         }
 
-        /*
-        Tampoco cambia nada, ya que solo ha sido creado y no lo hemos añadido a ningún lado
-         */
-
         System.out.println();
 
         /*
