@@ -124,10 +124,12 @@ public class Main {
         }
 
         /*
-        Creando un nuevo planeta, sin agregarlo a ningún lado
+        Creando un nuevo planeta plutón
          */
         System.out.println();
-        CuerpoCeleste pluton_nuevo = new Planeta("Plutón nuevo", 884, CuerpoCeleste.TipoCuerpoCeleste.PLANETA);
+        CuerpoCeleste pluton_nuevo = new Planeta("Pluton", 884, CuerpoCeleste.TipoCuerpoCeleste.PLANETA);
+        sistemaSolar.put("Plutón", pluton_nuevo);
+        planetas.add(pluton_nuevo);
 
         System.out.println("Todos los planetas, y ahora con Plutón:");
         for (CuerpoCeleste planetasSet : planetas) {
@@ -135,14 +137,12 @@ public class Main {
         }
 
         /*
-        Se ha creado Plutón (nuevo) pero no se ha modificado nada
-         */
-
-        /*
         Ahora lo creamos pero de tipo PLANETA_ENANO
          */
         System.out.println();
-        CuerpoCeleste pluton_enano = new PlanetaEnano("Plutón Enano", 884, CuerpoCeleste.TipoCuerpoCeleste.PLANETA_ENANO);
+        CuerpoCeleste pluton_enano = new PlanetaEnano("Pluton", 884, CuerpoCeleste.TipoCuerpoCeleste.PLANETA_ENANO);
+        sistemaSolar.put("Pluton", pluton_enano);
+        planetas.add(pluton_enano);
 
         System.out.println("Todos los planetas, y ahora con Plutón pero es un PLANETA_ENANO:");
         for (CuerpoCeleste planetasSet : planetas) {

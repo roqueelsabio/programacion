@@ -44,20 +44,17 @@ public class CuerpoCeleste {
         }
     }
 
-    public boolean equals(CuerpoCeleste cuerpo1, CuerpoCeleste cuerpo2) {
-        if (cuerpo1.getNombre().equals(cuerpo2.getNombre())) {
-            if (cuerpo1.getTipoCuerpo().equals(cuerpo2.getTipoCuerpo())) {
-                if (cuerpo1.getClass().equals("CuerpoCeleste") && (cuerpo2.getClass().equals("CuerpoCeleste"))) {
-                    System.out.println("Ambos son iguales.");
-                    return true;
-                }
-            }
-        }
-        return false;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        CuerpoCeleste c = (CuerpoCeleste) o;
+        return Objects.equals(nombre, c.nombre) && tipoCuerpo == c.tipoCuerpo;
     }
 
-    public int hashCode(CuerpoCeleste cuerpoCeleste) {
-        return cuerpoCeleste.getNombre().hashCode() + cuerpoCeleste.getTipoCuerpo().hashCode() + 2;
+    @Override
+    public int hashCode() {
+        return Objects.hash(nombre, tipoCuerpo) + 1;
     }
 
     @Override
