@@ -36,7 +36,7 @@ public class Impresora {
         if (result>=0 && result<=100){
             this.nivelToner += nivelToner;
         }
-        return result;
+        return this.nivelToner;
     }
 
     public int getNivelToner() {
@@ -65,9 +65,9 @@ public class Impresora {
     }
 
     /*
-        El método que imprime páginas y se añade a la lista de páginas impresas en función de
-        si es a doble cara o no (a doble cara es la mitad de hojas)
-         */
+    El método que imprime páginas y se añade a la lista de páginas impresas en función de
+    si es a doble cara o no (a doble cara es la mitad de hojas)
+    */
     public int imprimirPag(int numPagImp, boolean impDobleCara) {
         int numPar = numPagImp%2;
         if (!impDobleCara) {
@@ -75,6 +75,9 @@ public class Impresora {
             return getNumPagImp();
         } else if (impDobleCara && numPar==0) {
             this.numPagImp += (numPagImp/2);
+            return getNumPagImp();
+        } else if (impDobleCara && numPar!=0) {
+            this.numPagImp += (numPagImp/2) + 1;
             return getNumPagImp();
         } else {
             return -1;
