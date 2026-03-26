@@ -21,13 +21,17 @@ public class TelefonoMovil {
     }
 
     public boolean updateContact(Contacto antiguo, Contacto nuevo) {
+        int index = findContact(antiguo);
+        if (antiguo.equals(nuevo)) {
+            return false;
+        }
         for (Contacto cont : this.myContacts) {
-            if (cont.getName().equals(antiguo.getName())) {
-                myContacts.set(findContact(antiguo), nuevo);
-                return true;
+            if (cont.getName().equalsIgnoreCase(nuevo.getName()) && !cont.getName().equalsIgnoreCase(antiguo.getName())) {
+                return false;
             }
         }
-        return false;
+        myContacts.set(index, nuevo);
+        return true;
     }
 
     public boolean removeContact(Contacto contacto) {
@@ -71,7 +75,7 @@ public class TelefonoMovil {
                 if (cont == null) {
                     return null;
                 }
-                if (cont.getName().equals(nombre)) {
+                if (cont.getName().equalsIgnoreCase(nombre)) {
                     return cont;
                 }
             }
